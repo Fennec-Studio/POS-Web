@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./views/**/*.{html,js,hbs}",
-    "./assets/**/*.{js,css}"
+    "./assets/**/*.{js,css}",
+    "./assets/js/vendor/*.{js,css, json}",
   ],
   theme: {
     extend: {
@@ -10,11 +11,11 @@ module.exports = {
         Rubik: ['Rubik, sans-serif']
       },
       colors: {
-        'hover-blue': '#E0E7FF',
-        'blue-logo': '#004268',
-        'orange-logo': '#D5611D',
+        'black': '#000000',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
