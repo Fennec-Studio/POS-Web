@@ -1,8 +1,8 @@
 const mysqlConfig = {
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'db',
+    host: '134.209.40.120',
+    user: 'pos_sa',
+    password: 'EnuvLGKN@9',
+    database: 'pointofsale',
     insecureAuth : true
 }
 
