@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name="author" content="CampusTD">
     <meta name="description" content="description">
     <meta name="keywords" content="keywords">
     <title>Título</title>
     {{> HeaderStyles}}
-    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <h1>Prueba</h1>    
+
+<body class="overflow-hidden">
+    <div class="min-h-screen flex flex-col items-center justify-center bg-slate-100 dark:bg-[#252A2F]">
+        <div class="w-[90%] h-full bg-white dark:bg-slate-800 my-4 mx-4 py-4 px-4 drop-shadow-md rounded-md text-left text-slate-800 dark:text-white">
+            <h1 class="text-3xl font-Montserrat font-extrabold text-black dark:text-white">
+                Iniciar sesión
+            </h1>
+            <div class="flex flex-col justify-center items-center my-4">
+                <img src="/images/logoPOSF.png" class="w-1/2 md:w-52" alt="" srcset="">
+            </div>
+            <h2 class="mt-2 mb-2 font-SourceSansPro">
+                Inicie sesión para continuar
+            </h2>
+
+            <div class="relative group focus:text-green-300">
+                <div class="z-0 inline-flex items-center justify-center absolute left-0 top-0 h-full w-8 text-gray-300" id="emailIcon">
+                    <i class="fas fa-at ml-[2px]"></i>
+                </div>
+                <div class="z-0 absolute left-8 top-5 w-[1px] h-8 bg-gray-300 group-focus:bg-green-300" id="emailDiv">
+
+                </div>
+                <input type="text" name="txtEmail" id="txtEmail" class="z-20 bg-white dark:bg-slate-800 border border-gray-300 rounded-md w-full h-10 my-4 pl-10 focus:outline-none focus:ring-1 focus:ring-green-300 text-sm text-black dark:text-white" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="relative group">
+                <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-8 text-gray-300" id="passIcon">
+                    <i class="fas fa-lock ml-[2px]"></i>
+                </div>
+                <div class="absolute left-8 top-5 w-[1px] h-8 bg-gray-300" id="passDiv">
+
+                </div>
+                <input type="text" name="txtPass" id="txtPass" class="bg-white border dark:bg-slate-800 border-gray-300 rounded-md w-full h-10 my-4 pl-10 focus:outline-none focus:ring-1 focus:ring-green-300 text-sm" placeholder="Ingrese su contraseña">
+            </div>
+            <div class="font-Montserrat">
+                <button type="submit" id="btnLogIn" class="bg-[#7AC57C] w-full py-2 my-4 rounded-md text-white">Iniciar sesión</button>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="/js/pages/login.js"></script>
 </html>

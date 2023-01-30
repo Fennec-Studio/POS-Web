@@ -6,16 +6,14 @@ module.exports = {
     "./assets/js/vendor/*.{js,css, json}",
   ],
   theme: {
+    fontFamily: {
+      Montserrat: ["Montserrat", "sans-serif"],
+      SourceSansPro: ["Source Sans Pro", "sans-serif"],
+    },
     extend: {
-      fontFamily: {
-        Rubik: ['Rubik, sans-serif']
-      },
-      colors: {
-        'black': '#000000',
-      }
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    
   ],
 }
