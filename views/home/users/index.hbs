@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="CampusTD">
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+    <title>Título</title>
+    {{> HeaderStyles}}
+</head>
+<body>
+    {{> table}}
+
+    <a href="/users/?p=3">prueba</a>
+
+    <button onclick="prueba(1);">Prueba</button>
+
+
+    <script>
+        function prueba(idx) {
+            fetch('/users/?p=' + idx)
+            .then((response) => {
+                return response.text()
+            })
+            .then((data) => {
+                window.history.pushState({}, '', '/users?p=' + idx);
+                document.querySelector('table').innerHTML = data;
+            })
+        }
+    </script>
+</body>
+</html>

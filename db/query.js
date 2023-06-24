@@ -21,9 +21,9 @@ const result = (resultado) => {
 }
 
 const users = {
-    getAll: async () => {
+    getAll: async (p) => {
         try {
-            const queryResult = await query(`SELECT * FROM USERS_T`);
+            const queryResult = await query(`SELECT * FROM USERS_T LIMIT 10 OFFSET ?`, [p]);
             return result(queryResult);
         } catch (error) {
             throw error
